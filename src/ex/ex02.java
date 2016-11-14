@@ -2,11 +2,7 @@ package ex;
 
 import java.util.Scanner;
 
-/*
- * Date: 2016/11/14
- * Author: 104021074 ·¨¥Ã¸t
- */
-public class ex01 {
+public class ex02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,17 +16,23 @@ public class ex01 {
 			sum += data[i];
 		}
 		sum=sum/n;
-		System.out.println(var(sum,data,n)/n);
+		System.out.println(var(sum,data)/n);
+		System.out.println(std(var(sum,data)/n));
 	}
-	public static float var(int x,int data[],int n){
+	public static float var(int x,int data[]){
 		int y;
 		float sum=0;
-		for(int i=0;i<n;i++){
+		for(int i=0;i<data.length;i++){
 			y= x-(data[i]);
 			sum=(float) (sum+(Math.pow(y, 2)));
 		}
 		
 		return sum;
+	}
+	public static float std(float f){
+		f=(float) Math.sqrt(f);
+		return f;
+		
 	}
 
 }
